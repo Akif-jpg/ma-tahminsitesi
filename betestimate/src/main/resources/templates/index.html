@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <th:block th:include="common::head"></th:block>
+  <title>Ana Sayfa</title>
+</head>
+<body>
+  <!-- Navigator bar from common html page -->
+    <th:block th:replace="common::header"></th:block>
+      
+   
+    <div class='container'>
+       <!-- slyeder in here-->
+       <!-- list of current posts-->
+      <h2 class="w3-text-black w3-center h2 mt-3 lead" style="font-weight: bolder; font-size: 2.5em;"> En Güncel Bahisler Burada </h2>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div id="listcurrentposts" class="carousel-inner">
+              <div class="carousel-item active">                
+                  <a href="#">
+                     <img src="images/slyder.jpg" class="d-block w-100" alt="1">                    
+                     <div class="h4 w3-padding-small w3-hover-light-gray w3-white w3-text-black w3-display-bottommiddle ">
+                        Tahminler İçin Kaydırın
+                     </div>
+                 </a>                
+              </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>  
+    </div>
+    <!-- ul list in here-->
+    <!-- list of all posts-->
+    <div class="w3-margin w3-padding-16" style="display:flex;">
+      <h4 class="w3-margin">
+        Bahisleri Görün:
+      </h4>
+      <div style="margin-left: auto; margin-right: 0px; display: inline-block;">
+        <label for="selectall" class="h5">Tümünü Seç:&nbsp;</label>
+        <input class="w3-margin-right" id="selectall" type="checkbox" onchange="changeList()"/>
+        <label for="dateFilter" class="h5">Tarihi Seç:</label>
+        <input class="w3-margin" name="datefilter" type="date" id="setTime" onchange="filterByDate()"/>
+      </div>
+    </div>
+    <div id="listofposts" class="w3 -ul w3-card w3-margin w3-padding-64" style="padding-top: 32px;">
+        
+    </div>
+  </div>
+    <!-- Footer from common html page -->
+    <th:block th:replace="common::footer"></th:block>
+    <!-- Scripts -->
+    <th:block th:replace="common::scripts"></th:block>
+    <script src="js/ListAllPosts.js"></script>
+    <script src="js/ListCurrentPosts.js"></script>
+</body>
+</html>

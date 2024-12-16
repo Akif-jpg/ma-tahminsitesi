@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body style="background-image: url(/images/login-backgraound.jpg);">
+    <div style="color:white" th:if="${param.error}">
+        <center>Hatalı kullanıcı adı veya şifre</center>
+    </div>
+    <div style="color:white" th:if="${param.logout}">
+        <center>Başarıyla çıkış yaptınız</center>
+    </div>
+    <div class="login-card">
+        <h1>Admin Girişi</h1>
+        <form th:action="@{/login}" method="post">            
+            <div><label> Kullanıcı adı : <input type="text" name="username"/> </label></div>
+            <div><label> Şifre: <input type="password" name="password"/> </label></div>
+            <div><input type="submit" value="Giriş Yap"/></div>
+        </form>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Çıkış Yap"/>
+       </form>
+      <p></p>
+
+ 
+    </div>
+
+
+
+</body>
+</html>

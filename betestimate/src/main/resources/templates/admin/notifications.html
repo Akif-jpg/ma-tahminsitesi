@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <th:block th:include="~{/admin/admincommon::header}"></th:block>
+    <th:block th:replace="/admin/admincommon::modal01"></th:block>
+    <title>Bildirimler</title>
+</head>
+<body>
+    <th:block th:replace="~{/admin/admincommon::navbar}"></th:block>  
+    
+    <div class="container-fluid">
+        <div class="w3-auto">
+            
+            <ul class="w3-card w3-margin w3-padding-64" id="notsList">
+
+            </ul>
+
+        </div>
+    </div>
+
+    
+    <script src="/js/sec/notifications.js"></script>
+</body>
+</html>

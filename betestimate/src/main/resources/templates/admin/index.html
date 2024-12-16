@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+    <th:block th:include="/admin/admincommon::header"></th:block>
+    <title>Amin Kontrol Paneli</title>
+</head>
+<body>
+    <th:block th:replace="/admin/admincommon::navbar"></th:block>
+    <th:block th:replace="/admin/admincommon::modal01"></th:block>
+    <div class="bg-image"></div>
+
+    <div class="container-fluid p-3 my-3">
+        <div class="w3-wrapper">
+            <div class="w3-padding-top-64">
+                <center><h4 class="w3-text-orange">ANA SAYFA İDDİALARI</h4></center>
+                <table id="currentPostTable">
+
+                </table>
+            </div>    
+            <div class="w3-padding-top-64">
+                <center><h4 class="w3-text-orange">DİĞER İDDİALAR</h4></center>
+                <table id="postTable">
+
+                </table>
+            </div> 
+        </div>
+    </div>
+    <th:block th:include="/admin/admincommon::scripts"></th:block>
+
+    <style>
+        body,html {
+            background-image: url("/images/admin-bg.jpeg");
+            height: 100%;
+            background-position: center;
+            background-repeat: repeat;
+            background-size: cover;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            padding-top: 100px;
+            }
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            background-color: whitesmoke;
+        }
+        .table-image {
+            width: 50px;
+            height: 50px;
+
+        }
+    </style>
+</body>
+</html>
